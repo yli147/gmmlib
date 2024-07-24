@@ -168,6 +168,8 @@ endif()
 
 if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^aarch")
     set(GMMLIB_MARCH "armv8-a+fp+simd")
+elseif (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^riscv")
+    set(GMMLIB_MARCH "rv64gc")
 elseif("${GMMLIB_MARCH}" STREQUAL "")
     set(GMMLIB_MARCH "corei7")
 endif()
